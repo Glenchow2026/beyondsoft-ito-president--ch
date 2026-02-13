@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博彦科技 | ITO 业务数字化管理手册</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .tracking-tighter { letter-spacing: -0.05em; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .dark-module { background-color: #0B0E14; }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 82, 204, 0.1), 0 10px 10px -5px rgba(0, 82, 204, 0.04);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0052CC 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-[#F9FAFB] text-slate-900">
+
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center">
+                <!-- 去掉了左侧的蓝色 logo 方块，直接展示文字 -->
+                <span class="text-xl font-black tracking-tighter uppercase italic">Beyondsoft <span class="text-[#0052CC]">ITO</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold text-sm">
+                <a href="#overview" class="hover:text-[#0052CC] transition">管理体系</a>
+                <a href="#delivery" class="hover:text-[#0052CC] transition">交付流程</a>
+                <a href="#quality" class="hover:text-[#0052CC] transition">质量保障</a>
+                <a href="#human" class="hover:text-[#0052CC] transition">人才运营</a>
+                <a href="#hr" class="hover:text-[#0052CC] transition">考核激励</a>
+            </div>
+            <button class="bg-[#0052CC] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">
+                获取方案
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 bg-blue-50 text-[#0052CC] rounded-full text-xs font-bold uppercase tracking-widest mb-6 border border-blue-100">
+                        Corporate ITO Managed Services
+                    </span>
+                    <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">
+                        ITO 管理体系<br/><span class="gradient-text text-5xl md:text-7xl">质量保障与合规治理</span>
+                    </h1>
+                    <p class="text-lg text-slate-500 mb-10 max-w-lg leading-relaxed">
+                        博彦科技通过数字化流程与业务执行引擎，构建端到端行为审计、业务安全体系及核心人才风险预警机制。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center space-x-3 bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-[#0052CC] text-xl"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">安全与合规</p>
+                                <p class="font-bold">实时预警机制</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-white p-4 rounded-3xl border border-gray-100 shadow-sm">
+                            <i class="fa-solid fa-users-gear text-[#6366F1] text-xl"></i>
+                            <div>
+                                <p class="text-xs text-gray-400 font-bold uppercase">核心人才</p>
+                                <p class="font-bold">分阶段维稳策略</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full blur-3xl opacity-10 animate-pulse"></div>
+                    <div class="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-2xl relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-8">
+                            <h3 class="font-black text-xl tracking-tighter">管理矩阵分布</h3>
+                            <i class="fa-solid fa-ellipsis-h text-gray-300"></i>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="bg-[#F9FAFB] p-6 rounded-3xl border border-gray-50 border-l-4 border-l-[#0052CC]">
+                                <h4 class="font-black text-sm mb-2">SSC 共享服务平台</h4>
+                                <p class="text-xs text-gray-500">考勤管理 | 薪酬福利 | 员工激励</p>
+                            </div>
+                            <div class="bg-[#F9FAFB] p-6 rounded-3xl border border-gray-50 border-l-4 border-l-[#6366F1]">
+                                <h4 class="font-black text-sm mb-2">项目管理数字化平台</h4>
+                                <p class="text-xs text-gray-500">计划任务 | 实时进度 | 风险预警</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-blue-50 p-4 rounded-2xl text-center">
+                                    <p class="text-2xl font-black text-[#0052CC]">98%</p>
+                                    <p class="text-[10px] uppercase font-bold text-blue-400 tracking-wider">交付满意度</p>
+                                </div>
+                                <div class="bg-indigo-50 p-4 rounded-2xl text-center">
+                                    <p class="text-2xl font-black text-[#6366F1]">15%</p>
+                                    <p class="text-[10px] uppercase font-bold text-indigo-400 tracking-wider">效率提升率</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 交付闭环板块 (Page 3-8) -->
+    <section id="delivery" class="py-24 dark-module text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">交付体系闭环 <span class="text-blue-500">/</span></h2>
+                <p class="text-gray-400 max-w-xl">全生命周期服务覆盖，从需求分析到项目后续管理的一站式数字化交付引擎。</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="group relative">
+                    <div class="text-8xl font-black text-white/5 absolute -top-8 -left-4">01</div>
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-magnifying-glass-chart text-[#0052CC] text-3xl mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3 tracking-tighter">需求分析</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            深度沟通，输出《需求规格说明书》(SRS)，明确功能与非功能需求。
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="group relative">
+                    <div class="text-8xl font-black text-white/5 absolute -top-8 -left-4">02</div>
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-id-card-clip text-[#6366F1] text-3xl mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3 tracking-tighter">人才寻访</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            基于动态“技能图谱”，AI智能匹配人才库，通过多轮面试筛选。
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="group relative">
+                    <div class="text-8xl font-black text-white/5 absolute -top-8 -left-4">03</div>
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-desktop text-[#F43F5E] text-3xl mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3 tracking-tighter">驻场交付</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            标准化入职 SOP，技术专家全程指导，确保平滑接入客户环境。
+                        </p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="group relative">
+                    <div class="text-8xl font-black text-white/5 absolute -top-8 -left-4">04</div>
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-arrows-rotate text-emerald-400 text-3xl mb-6"></i>
+                        <h3 class="text-xl font-bold mb-3 tracking-tighter">后续管理</h3>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            全量透明管控，风险实时预警，持续优化 KPI 模型。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 招聘漏斗 Page 10-12 -->
+            <div class="mt-24 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h3 class="text-3xl font-black tracking-tighter italic">RECRUITMENT FUNNEL<br/>数字化招聘执行引擎</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/10 hover:border-blue-500/50 transition cursor-default">
+                            <span class="w-12 h-12 flex items-center justify-center bg-blue-600 rounded-xl mr-4 font-bold">1</span>
+                            <div>
+                                <h5 class="font-bold">多渠道寻源策略</h5>
+                                <p class="text-xs text-gray-400">自有资源池、猎头及校企合作多维覆盖</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-white/5 p-4 rounded-2xl border border-white/10 hover:border-blue-500/50 transition cursor-default">
+                            <span class="w-12 h-12 flex items-center justify-center bg-indigo-600 rounded-xl mr-4 font-bold">2</span>
+                            <div>
+                                <h5 class="font-bold">漏斗链路追踪</h5>
+                                <p class="text-xs text-gray-400">实时追踪转化率，动态调整招聘资源配比</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-900 to-black p-1 rounded-3xl border border-white/10">
+                    <div class="p-8 space-y-6">
+                        <div class="w-full h-12 bg-blue-600 rounded-lg flex items-center px-4 font-bold text-sm justify-between">简历获取<span>100%</span></div>
+                        <div class="w-3/4 h-12 bg-blue-700/80 rounded-lg flex items-center px-4 font-bold text-sm justify-between mx-auto">初面合格<span>45%</span></div>
+                        <div class="w-1/2 h-12 bg-blue-800/60 rounded-lg flex items-center px-4 font-bold text-sm justify-between mx-auto">客户复试<span>22%</span></div>
+                        <div class="w-1/4 h-12 bg-blue-900/40 rounded-lg flex items-center px-4 font-bold text-sm justify-between mx-auto">签约入职<span>12%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量保障体系 Page 18-22 -->
+    <section id="quality" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-black tracking-tighter mb-4">自动化测试与 CI/CD</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto italic">“从代码提交到部署的全流程自动化质量保障”</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-10 rounded-[3rem] bg-[#F9FAFB] border border-gray-100 card-hover">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-code-merge text-[#0052CC] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 tracking-tighter">流水线集成</h3>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 性能压测嵌入</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 代码持续监控与审查</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 漏洞扫描自动化</li>
+                    </ul>
+                </div>
+                <div class="p-10 rounded-[3rem] bg-[#F9FAFB] border border-gray-100 card-hover">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-8">
+                        <i class="fa-solid fa-vial-circle-check text-[#6366F1] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 tracking-tighter">交付质量指标</h3>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 缺陷修复时效监控</li>
+                        <li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 单元测试覆盖率 ≥85%</li>
+                        <li><i class="fa-solid fa-check text-indigo-500 mr-2"></i> 项目里程碑 100% 达成</li>
+                    </ul>
+                </div>
+                <div class="p-10 rounded-[3rem] bg-[#0052CC] text-white card-hover relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition duration-700">
+                        <i class="fa-solid fa-rocket text-[12rem]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 tracking-tighter">交付收益</h3>
+                    <p class="text-blue-100 mb-8 leading-relaxed">通过工具链显著提升交付效率，确保系统在高负载下的稳定性与可维护性。</p>
+                    <div class="bg-white/10 p-4 rounded-2xl backdrop-blur-sm">
+                        <p class="text-xs uppercase font-bold tracking-widest opacity-60">提升交付效率</p>
+                        <p class="text-3xl font-black">+35%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 考核体系与 SMART 原则 Page 23-24 -->
+    <section id="hr" class="py-24 px-6 bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-[#0B0E14] rounded-[4rem] p-12 md:p-20 text-white relative overflow-hidden">
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-8 italic">SMART<br/><span class="text-[#0052CC]">KPI 设计原则</span></h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                                <b class="block text-[#0052CC] mb-1">Specific (具体)</b>
+                                <span class="text-gray-400">目标明确，不含糊</span>
+                            </div>
+                            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                                <b class="block text-[#0052CC] mb-1">Measurable (可衡量)</b>
+                                <span class="text-gray-400">量化评估标准</span>
+                            </div>
+                            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                                <b class="block text-[#0052CC] mb-1">Achievable (可达成)</b>
+                                <span class="text-gray-400">挑战性合理</span>
+                            </div>
+                            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                                <b class="block text-[#0052CC] mb-1">Relevant (相关性)</b>
+                                <span class="text-gray-400">与岗位职责挂钩</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 md:p-12 rounded-[3rem] text-slate-900 shadow-2xl">
+                        <h4 class="font-black text-2xl tracking-tighter mb-6">360度评估反馈</h4>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <div>
+                                    <p class="font-bold">上级评价</p>
+                                    <p class="text-xs text-gray-400">成果、目标、改进建议</p>
+                                </div>
+                                <span class="text-[#0052CC] font-bold">40%</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <div>
+                                    <p class="font-bold">同事互评</p>
+                                    <p class="text-xs text-gray-400">协作、沟通、共享意愿</p>
+                                </div>
+                                <span class="text-[#6366F1] font-bold">30%</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-4 border-b border-gray-100">
+                                <div>
+                                    <p class="font-bold">客户评价</p>
+                                    <p class="text-xs text-gray-400">响应、解决能力、满意度</p>
+                                </div>
+                                <span class="text-[#F43F5E] font-bold">30%</span>
+                            </div>
+                            <div class="pt-4">
+                                <p class="text-xs text-slate-400 italic">考核结果作为绩效激励及核心员工维稳的重要依据。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-[#F9FAFB] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:row justify-between items-center text-sm text-gray-400">
+            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                <div class="w-6 h-6 bg-gray-200 rounded flex items-center justify-center text-white font-bold text-[10px]">B</div>
+                <p class="font-bold uppercase tracking-widest text-gray-500">Beyondsoft Corporation © 2024</p>
+            </div>
+            <div class="flex space-x-8">
+                <a href="#" class="hover:text-blue-600 transition">数字化看板</a>
+                <a href="#" class="hover:text-blue-600 transition">内部管理系统</a>
+                <a href="#" class="hover:text-blue-600 transition">隐私协议</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 简单的浮动交互：滚动条进度 -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-[#0052CC] via-[#6366F1] to-[#F43F5E] z-[60]" style="width: 0%"></div>
+
+    <script>
+        // 滚动进度条
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + "%";
+        });
+
+        // 简单的入场动画观察者
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        // 为需要动画的卡片添加初始状态
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
